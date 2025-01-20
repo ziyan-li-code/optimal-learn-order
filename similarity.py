@@ -191,43 +191,8 @@ def flatten_gradients(gradients):
     return jnp.concatenate([jnp.ravel(g) for g in jax.tree_util.tree_leaves(gradients)])
 
 
-# similarity matrix based on the gradient-Hession-gradient model: g*Hg/[norm(g)*norm(Hg)]
-def sim_matrix_ghg(const_params, train_ds_list, trained_state_list, train_groups_label_list, target_random_label_list):
-    # number of tasks in continual learning
-    num_task = const_params['num_task']
-
-    # gHg determined similarity matrix
-    sim_ghg_m = jnp.zeros((num_task, num_task))
-    for mu in range(num_task):
-        for v in range(num_task):
-            # gradient with trained state of task-mu on dataset of task-v
-            grad_state_mu_ds_v = avg_grads(trained_state_list[mu].params, trained_state_list[mu], train_ds_list[v],
-                                           train_groups_label_list[v], target_random_label_list[v],
-                                           const_params['num_output_classes'])
-            grad_state_mu_ds_v_cpu = device_put(grad_state_mu_ds_v, device=jax.devices("cpu")[0])
-
-            # Hg: H should be based on full dataset, with trained state of task-mu on dataset of task-mu
-            hvp = avg_hvp(trained_state_list[mu].params, trained_state_list[mu], train_ds_list[mu],
-                          train_groups_label_list[mu], target_random_label_list[mu],
-                          const_params['num_output_classes'], grad_state_mu_ds_v)
-
-            # ghg similarity with (task-mu, task-v)
-            grad_mu_v_flat, hvp_flat = flatten_gradients(grad_state_mu_ds_v_cpu), flatten_gradients(hvp) # 1D vector flat
-            grad_mu_v_norm, hvp_norm = jnp.linalg.norm(grad_mu_v_flat, ord=2), jnp.linalg.norm(hvp_flat, ord=2)
-            ghg_norm = jnp.dot(grad_mu_v_flat, hvp_flat) / (grad_mu_v_norm * hvp_norm)
-            sim_ghg_m = sim_ghg_m.at[mu, v].set(ghg_norm)  # or 1-ghg_norm
-
-    # average of (mu, v) and (v, mu) in similarity matrix
-    sim_ghg_avg_m = jnp.zeros((num_task, num_task))
-    for mu in range(num_task):
-        for v in range(num_task):
-            sim_ghg_avg_m = sim_ghg_avg_m.at[mu, v].set((sim_ghg_m[mu, v] + sim_ghg_m[v, mu])/2)
-
-    return sim_ghg_avg_m
-
-
-# similarity matrix based on the gradient-Hession-gradient model: -g*Hg, without normalization
-def sim_matrix_neg_ghg_without_norm(const_params, train_ds_list, trained_state_list, train_groups_label_list, target_random_label_list):
+# similarity matrix based on the gradient-Hession-gradient model: -g*Hg
+def sim_matrix_neg_ghg(const_params, train_ds_list, trained_state_list, train_groups_label_list, target_random_label_list):
     # number of tasks in continual learning
     num_task = const_params['num_task']
 
@@ -262,39 +227,3 @@ def sim_matrix_neg_ghg_without_norm(const_params, train_ds_list, trained_state_l
             sim_neg_ghg_avg_m = sim_neg_ghg_avg_m.at[mu, v].set((sim_neg_ghg_m[mu, v] + sim_neg_ghg_m[v, mu])/2)
 
     return sim_neg_ghg_avg_m, g_norm_m, Hg_norm_m
-#######################################################################################################################
-
-
-# similarity matrix based on the gradient-Hession-gradient model: 1-g*Hg/[norm(g)*norm(g)]
-def sim_matrix_ghg_g_norm(const_params, train_ds_list, trained_state_list, train_groups_label_list, target_random_label_list):
-    # number of tasks in continual learning
-    num_task = const_params['num_task']
-
-    # gHg determined similarity matrix
-    sim_ghg_m = jnp.zeros((num_task, num_task))
-    for mu in range(num_task):
-        for v in range(num_task):
-            # gradient with trained state of task-mu on dataset of task-v
-            grad_state_mu_ds_v = avg_grads(trained_state_list[mu].params, trained_state_list[mu], train_ds_list[v],
-                                           train_groups_label_list[v], target_random_label_list[v],
-                                           const_params['num_output_classes'])
-            grad_state_mu_ds_v_cpu = device_put(grad_state_mu_ds_v, device=jax.devices("cpu")[0])
-
-            # Hg: H should be based on full dataset, with trained state of task-mu on dataset of task-mu
-            hvp = avg_hvp(trained_state_list[mu].params, trained_state_list[mu], train_ds_list[mu],
-                          train_groups_label_list[mu], target_random_label_list[mu],
-                          const_params['num_output_classes'], grad_state_mu_ds_v)
-
-            # ghg similarity with (task-mu, task-v)
-            grad_mu_v_flat, hvp_flat = flatten_gradients(grad_state_mu_ds_v_cpu), flatten_gradients(hvp) # 1D vector flat
-            grad_mu_v_norm, hvp_norm = jnp.linalg.norm(grad_mu_v_flat, ord=2), jnp.linalg.norm(hvp_flat, ord=2)
-            ghg_norm = jnp.dot(grad_mu_v_flat, hvp_flat) / (grad_mu_v_norm * grad_mu_v_norm)
-            sim_ghg_m = sim_ghg_m.at[mu, v].set(1-ghg_norm)  # or 1-ghg_norm
-
-    # average of (mu, v) and (v, mu) in similarity matrix
-    sim_ghg_avg_m = jnp.zeros((num_task, num_task))
-    for mu in range(num_task):
-        for v in range(num_task):
-            sim_ghg_avg_m = sim_ghg_avg_m.at[mu, v].set((sim_ghg_m[mu, v] + sim_ghg_m[v, mu])/2)
-
-    return sim_ghg_avg_m
