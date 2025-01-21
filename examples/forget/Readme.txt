@@ -1,1 +1,0 @@
-Find the average performance of number of permutations in specific sample points
