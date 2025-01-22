@@ -1,4 +1,3 @@
-# optimal-learn-order
 Codes for the continual learning project with optimal order model
 
 Thank you for using this code! If you find it useful in your research or work, please cite the associated article:
@@ -10,7 +9,6 @@ Please refer to the following article if you use this code:
 
 ### BibTeX
 You can use the following BibTeX entry:
-```bibtex
 @article{YourCitationKey,
   author    = {Your Name and Co-author Name},
   title     = {Title of Your Article},
