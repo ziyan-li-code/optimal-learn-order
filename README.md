@@ -56,10 +56,9 @@ The following parameters are used in this machine learning model:
 | `learning_rate`    | Learning rate for the optimizer.             | `0.001`       |
 | `batch_size`       | Number of samples per batch during training. | `4`        |
 | `ghg_batch_size`       | Number of samples per batch during similarity calculation with -ghg model. | `256`        |
-| `num_epochs`       | Number of training epochs.                   | `100`         |
+| `num_epochs`       | Number of training epochs.                   | `5`         |
 | `optimizer`        | Optimizer used for training.                 | `Adam`        |
 | `loss_function`    | Loss function used to train the model.       | `CrossEntropy`|
-| `dropout_rate`     | Dropout rate to prevent overfitting.         | `0.5`         |
-| `input_size`       | Dimensions of the input features.            | `224x224x3`   |
-| `output_size`      | Number of output classes.                    | `10`          |
+| `shuffle_size`     | Size of the buffer used for shuffling the dataset.| `1000`       |
+| `num_perm`       | Number of permutations to represent average performance in continual learning.            | `6`   |
 
