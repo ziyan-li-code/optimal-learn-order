@@ -38,7 +38,7 @@ This module handles the **preprocessing** and **uploading** of TensorFlow datase
 This module extracts data from `.csv` files. It processes files containing **labels** and **accuracies** to prepare them for further analysis.
 
 ### `group_split.py`
-This module allows for selecting specific classes (e.g., `num_task * num_classes`) from a dataset. It splits the selected classes into **task-specific groups** for targeted training.
+This module allows for selecting specific classes from a dataset. It splits the selected classes into **task-specific groups** for targeted training.
 
 ### `network.py`
 This module builds neural networks using **Flax** (`flax.nn`). It supports:
@@ -66,7 +66,7 @@ The following parameters are used in this machine learning model:
 |--------------------|-----------------------------------------------|---------------|
 | `learning_rate`    | Learning rate for the optimizer.             | `0.001`       |
 | `batch_size`       | Number of samples per batch during training. | `4`        |
-| `ghg_batch_size`       | Number of samples per batch during similarity calculation with -ghg model. | `256`        |
+| `ghg_batch_size`       | Number of samples per batch during gradient-Hessian-gradient  similarity calculation. | `256`        |
 | `num_epochs`       | Number of training epochs.                   | `5`         |
 | `optimizer`        | Optimizer used for training.                 | `Adam`        |
 | `loss_function`    | Loss function used to train the model.       | `CrossEntropy`|
