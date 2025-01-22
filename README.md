@@ -9,16 +9,16 @@ Please refer to the following article if you use this code:
 
 ### BibTeX
 You can use the following BibTeX entry:
-@article{YourCitationKey,
-  author    = {Your Name and Co-author Name},
-  title     = {Title of Your Article},
-  journal   = {Journal/Conference Name},
-  year      = {Year},
-  volume    = {Volume},
-  number    = {Issue},
-  pages     = {Page range},
-  doi       = {Insert DOI link here},
-  url       = {Insert URL here}
+@article{YourCitationKey, \
+  author    = {Your Name and Co-author Name}, \
+  title     = {Title of Your Article}, \
+  journal   = {Journal/Conference Name}, \
+  year      = {Year}, \
+  volume    = {Volume}, \
+  number    = {Issue}, \
+  pages     = {Page range}, \
+  doi       = {Insert DOI link here}, \
+  url       = {Insert URL here} \
 }
 
 ## Explanations for modules
