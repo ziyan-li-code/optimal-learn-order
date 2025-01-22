@@ -46,3 +46,19 @@ module for inter-task similarity calculation based on zero-shot/-gHg model
 
 ## Examples repository
 Some experiment examples codes, details in README.md inside
+
+## General Parameters
+
+The following parameters are used in this machine learning model:
+
+| Parameter Name     | Description                                   | Default Value |
+|--------------------|-----------------------------------------------|---------------|
+| `learning_rate`    | Learning rate for the optimizer.             | `0.001`       |
+| `batch_size`       | Number of samples per batch during training. | `32`          |
+| `num_epochs`       | Number of training epochs.                   | `100`         |
+| `optimizer`        | Optimizer used for training.                 | `Adam`        |
+| `loss_function`    | Loss function used to train the model.       | `CrossEntropy`|
+| `dropout_rate`     | Dropout rate to prevent overfitting.         | `0.5`         |
+| `input_size`       | Dimensions of the input features.            | `224x224x3`   |
+| `output_size`      | Number of output classes.                    | `10`          |
+
