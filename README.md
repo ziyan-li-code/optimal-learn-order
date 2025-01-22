@@ -8,7 +8,7 @@ Please refer to the following article if you use this code:
 [Author Name(s)], "[Title of Your Article]," *Journal/Conference Name*, Year, DOI: [Insert DOI link here].
 
 ### BibTeX
-You can use the following BibTeX entry:
+You can use the following BibTeX entry: \
 @article{YourCitationKey, \
   author    = {Your Name and Co-author Name}, \
   title     = {Title of Your Article}, \
