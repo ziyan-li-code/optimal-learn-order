@@ -64,7 +64,7 @@ The following parameters are used in this machine learning model:
 |--------------------|-----------------------------------------------|---------------|
 | `learning_rate`    | Learning rate for the optimizer.             | `0.001`       |
 | `batch_size`       | Number of samples per batch during training. | `4`        |
-| `ghg_batch_size`       | Number of samples per batch during gradient-Hessian-gradient  similarity calculation. | `256`        |
+| `ghg_batch_size`       | Number of samples per batch during negative-gradient-Hessian-gradient  similarity calculation. | `256`        |
 | `num_epochs`       | Number of training epochs.                   | `5`         |
 | `optimizer`        | Optimizer used for training.                 | `Adam`        |
 | `loss_function`    | Loss function used to train the model.       | `CrossEntropy`|
