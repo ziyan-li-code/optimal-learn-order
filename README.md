@@ -1,9 +1,7 @@
 Codes for the continual learning project with optimal order model
 
-Thank you for using this code! If you find it useful in your research or work, please cite the associated article:
-
 ## Citation
-Please refer to the following article if you use this code:
+Thank you for using this code! If you find it useful and use it in your research or work, please cite the associated article:
 
 [Author Name(s)], "[Title of Your Article]," *Journal/Conference Name*, Year, DOI: [Insert DOI link here].
 
