@@ -26,23 +26,23 @@ You can use the following BibTeX entry: \
 #### continual_model.py
 module for model training, including continual learning codes
 
-#### data_analyze.py
-module for data extraction and visualization with given .csv file
+#### dataset_process.py
+module for pre-process and uploading tensorflow dataset (ex. cifar10, cifar100, fashion_mnist)
 
-#### data_process.py
-module for pre-process and uploading of datasets from tensorflow dataset
+#### file_extract.py
+module for data extraction with given .csv files which save labels and accuracies
 
 #### group_split.py
-module for choosing specific classes(num_task*num_classes) from dataset and split these classes into groups 
+module for choosing specific classes(num_task*num_classes) from specific dataset and split these classes into num_task groups 
 
 #### network.py
 module for neuro network generated using flax.nn, including convolutional neuro network and nonlinear neuro network
 
-#### order.py
+#### opt_order.py
 module for obtaining optimal order based on hamiltonian-path/periphery-core model
 
 #### similarity.py
-module for inter-task similarity calculation based on zero-shot/gHg model
+module for inter-task similarity calculation based on zero-shot/-gHg model
 
-## Experiment repository
+## Examples repository
 Some experiment examples codes, details in README.md inside
