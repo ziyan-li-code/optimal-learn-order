@@ -21,31 +21,42 @@ You can use the following BibTeX entry: \
   url       = {Insert URL here} \
 }
 
-## Explanations for modules
+## Explanations for Modules
 
-#### continual_model.py
-module for model training, including continual learning codes
+This repository contains several modules designed for machine learning tasks. Below is an explanation of each module and its purpose:
 
-#### dataset_process.py
-module for pre-process and uploading tensorflow dataset (ex. cifar10, cifar100, fashion_mnist)
+### `continual_model.py`
+This module provides tools for model training, including implementations for **continual learning**. It supports tasks such as incremental learning with multiple datasets.
 
-#### file_extract.py
-module for data extraction with given .csv files which save labels and accuracies
+### `dataset_process.py`
+This module handles the **preprocessing** and **uploading** of TensorFlow datasets. Examples of supported datasets include:
+- CIFAR-10
+- CIFAR-100
+- Fashion MNIST
 
-#### group_split.py
-module for choosing specific classes(num_task*num_classes) from specific dataset and split these classes into num_task groups 
+### `file_extract.py`
+This module extracts data from `.csv` files. It processes files containing **labels** and **accuracies** to prepare them for further analysis.
 
-#### network.py
-module for neuro network generated using flax.nn, including convolutional neuro network and nonlinear neuro network
+### `group_split.py`
+This module allows for selecting specific classes (e.g., `num_task * num_classes`) from a dataset. It splits the selected classes into **task-specific groups** for targeted training.
 
-#### opt_order.py
-module for obtaining optimal order based on hamiltonian-path/periphery-core model
+### `network.py`
+This module builds neural networks using **Flax** (`flax.nn`). It supports:
+- **Convolutional Neural Networks (CNNs)**
+- **Nonlinear Neural Networks**
 
-#### similarity.py
-module for inter-task similarity calculation based on zero-shot/-gHg model
+### `opt_order.py`
+This module computes the **optimal order** for tasks or datasets based on the **Hamiltonian Path** or **Periphery-Core Model**.
 
-## Examples repository
-Some experiment examples codes, details in README.md inside
+### `similarity.py`
+This module calculates **inter-task similarity** using techniques such as:
+- **Zero-shot learning**
+- **gHg (gradient-Hessian-gradient) analysis**
+
+---
+
+## Example Repository
+The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file.
 
 ## General Parameters
 
