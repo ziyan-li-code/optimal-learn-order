@@ -49,7 +49,7 @@ This module computes the **optimal order** for tasks or datasets based on the **
 ### `similarity.py`
 This module calculates **inter-task similarity** using techniques such as:
 - **Zero-shot learning**
-- **gHg (gradient-Hessian-gradient) analysis**
+- **-gHg (negative-gradient-Hessian-gradient) analysis**
 
 ---
 
