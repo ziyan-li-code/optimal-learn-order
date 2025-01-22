@@ -54,7 +54,7 @@ The following parameters are used in this machine learning model:
 | Parameter Name     | Description                                   | Default Value |
 |--------------------|-----------------------------------------------|---------------|
 | `learning_rate`    | Learning rate for the optimizer.             | `0.001`       |
-| `batch_size`       | Number of samples per batch during training. | `32`          |
+| `batch_size`       | Number of samples per batch during training. | `4` or '256'          |
 | `num_epochs`       | Number of training epochs.                   | `100`         |
 | `optimizer`        | Optimizer used for training.                 | `Adam`        |
 | `loss_function`    | Loss function used to train the model.       | `CrossEntropy`|
