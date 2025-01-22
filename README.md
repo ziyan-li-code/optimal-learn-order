@@ -1,10 +1,33 @@
 # optimal-learn-order
 Codes for the continual learning project with optimal order model
 
-#### model_train.py
-module for model training, including continual learning codes
+Thank you for using this code! If you find it useful in your research or work, please cite the associated article:
+
+## Citation
+Please refer to the following article if you use this code:
+
+[Author Name(s)], "[Title of Your Article]," *Journal/Conference Name*, Year, DOI: [Insert DOI link here].
+
+### BibTeX
+You can use the following BibTeX entry:
+```bibtex
+@article{YourCitationKey,
+  author    = {Your Name and Co-author Name},
+  title     = {Title of Your Article},
+  journal   = {Journal/Conference Name},
+  year      = {Year},
+  volume    = {Volume},
+  number    = {Issue},
+  pages     = {Page range},
+  doi       = {Insert DOI link here},
+  url       = {Insert URL here}
+}
 
 ## Explanations for modules
+
+#### continual_model.py
+module for model training, including continual learning codes
+
 #### data_analyze.py
 module for data extraction and visualization with given .csv file
 
