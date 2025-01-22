@@ -123,7 +123,7 @@ for i in range(len(org_label_list_split)):
     if params['sim_type'] == 'zero_shot':
         sim_matrix = sim_matrix_zero_shot(params['num_task'], train_model_state_list, test_ds_list_org, group_labels,
                                           target_random_labels, params['num_output_classes'])
-    elif params['sim_type'] == '1-ghg':
+    elif params['sim_type'] == '-ghg':
         train_ds_list_full, test_ds_list_full = gen_ds_load_neg_ghg(group_labels, params, train_ds, test_ds)
         sim_matrix = sim_matrix_neg_ghg(params, train_ds_list_full, train_model_state_list, group_labels, target_random_labels)
     else:
