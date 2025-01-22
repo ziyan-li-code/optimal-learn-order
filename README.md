@@ -60,5 +60,4 @@ The following parameters are used in this machine learning model:
 | `optimizer`        | Optimizer used for training.                 | `Adam`        |
 | `loss_function`    | Loss function used to train the model.       | `CrossEntropy`|
 | `shuffle_size`     | Size of the buffer used for shuffling the dataset.| `1000`       |
-| `num_perm`       | Number of permutations to represent average performance in five-task continual learning.            | `30`   |
 
