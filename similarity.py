@@ -6,7 +6,7 @@ import gc
 import optax
 from flax import linen as nn
 
-from model_train import test_model, apply_model, batch_label_change
+from continual_model import test_model, apply_model, batch_label_change
 
 #######################################################################################################################
 """
