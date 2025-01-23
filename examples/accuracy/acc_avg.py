@@ -21,6 +21,11 @@ from continual_model import contin_train
 parameters for experiment
 """
 params = {
+    # parameters for model choose
+    'ds_type': 'cifar10',  # dataset type: 'fashion_mnist', 'cifar10', 'cifar100'
+    'nn_type': 'cnn2',  # neurowork model type: 'cnn2', 'cnn5', 'nonlinear2', 'nonlinear5'
+    'sim_type': 'zero_shot',  # similarity calculation model type: zero_short, -ghg
+
     # parameters for training process
     'num_task': 5,  # number of tasks
     'num_output_classes': 2,  # num of output classes
@@ -31,11 +36,6 @@ params = {
     'batch_size': 4,   # batch size
     'shuffle_size': 1000,  # shuffle size
     'image_size': [32, 32, 3],  # size of image data, [28, 28, 1] for grayscale image, [32, 32, 3] for colored ones
-
-    # parameters for model choose
-    'ds_type': 'cifar10',  # dataset type: 'fashion_mnist', 'cifar10', 'cifar100'
-    'nn_type': 'cnn2',  # neurowork model type: 'cnn2', 'cnn5', 'nonlinear2', 'nonlinear5'
-    'sim_type': 'zero_shot',  # similarity calculation model type: zero_short, -ghg
 
     # parameters for experiment setting
     'num_pick': 10,  # number of ways to randomly pick and group num_task*num_class classes from num_all_class
