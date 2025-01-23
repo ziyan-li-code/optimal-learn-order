@@ -1,24 +1,5 @@
 Codes for the continual learning project with optimal order model
 
-## Citation
-Thank you for reading and using this code! If you find it useful and use it in your research or work, please cite the associated article:
-
-[Author Name(s)], "[Title of Your Article]," *Journal/Conference Name*, Year, DOI: [Insert DOI link here].
-
-### BibTeX
-You can use the following BibTeX entry: \
-@article{YourCitationKey, \
-  author    = {Your Name and Co-author Name}, \
-  title     = {Title of Your Article}, \
-  journal   = {Journal/Conference Name}, \
-  year      = {Year}, \
-  volume    = {Volume}, \
-  number    = {Issue}, \
-  pages     = {Page range}, \
-  doi       = {Insert DOI link here}, \
-  url       = {Insert URL here} \
-}
-
 ## Explanations for Modules
 
 This repository contains several modules designed for machine learning tasks. Below is an explanation of each module and its purpose:
