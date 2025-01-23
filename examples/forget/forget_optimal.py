@@ -24,6 +24,12 @@ from similarity import sim_matrix_zero_shot, sim_matrix_neg_ghg, sim_mean
 parameters for experiment
 """
 params = {
+    # parameters for model choose
+    'ds_type': 'cifar10',  # dataset type
+    'nn_type': 'cnn2',  # nn model type: 'cnn2', 'cnn5', 'nonlinear2', 'nonlinear5'
+    'sim_type': '-ghg',  # similarity calculation model type: 'zero_shot', '-ghg'
+    'ghg_batch_size': 256,  # batch size to calculate similarity if 'sim_type' = '-ghg'
+
     # parameters for training process
     'num_task': 5,  # number of tasks
     'num_output_classes': 2,  # num of output classes
@@ -34,12 +40,6 @@ params = {
     'batch_size': 4,   # batch size
     'shuffle_size': 1000,  # shuffle size
     'image_size': [32, 32, 3],  # size of image data, [28, 28] for grayscale image, [32, 32, 3] for colored ones
-
-    # parameters for model choose
-    'ds_type': 'cifar10',  # dataset type
-    'nn_type': 'cnn2',  # nn model type: 'cnn2', 'cnn5', 'nonlinear2', 'nonlinear5'
-    'sim_type': '-ghg',  # similarity calculation model type: 'zero_shot', '-ghg'
-    'ghg_batch_size': 256,  # batch size to calculate similarity if 'sim_type' = '-ghg'
 
     # parameters for experiment setting
     'path2avg': 'cifar10_cnn2_P5_C2_forget_avg_index1',  # path to csv file you keep the average forget performance
