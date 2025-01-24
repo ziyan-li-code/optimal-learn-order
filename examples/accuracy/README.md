@@ -37,6 +37,8 @@ This script calculates the **optimal accuracy** achieved by the two models when 
 - **`sim_type`**: Similarity calculation model type:
   - `'zero_shot'`: Zero-shot learning evaluation.
   - `'-ghg'`: negative Gradient-based similarity analysis.
+- **`ghg_batch_size`**: Batch size used for calculating task similarity when `sim_type` is set to `'-ghg'` (default: 256).
+
 
 ### Training Process
 - **`num_task`**: Total number of tasks in the continual learning setup (e.g., 5).
