@@ -34,7 +34,7 @@ This module calculates **inter-task similarity** using techniques such as:
 ---
 
 ## Example Repository
-The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file.
+The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file. \
 The `linear_model` directory contains codes for linear perturbation theory.
 
 ## General Parameters
