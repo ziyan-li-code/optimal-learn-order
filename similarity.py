@@ -11,8 +11,6 @@ from continual_model import test_model, apply_model, batch_label_change
 #######################################################################################################################
 """
 zero-shot similarity model based on error transfer
-details in paper ...
-
 """
 
 
@@ -109,7 +107,7 @@ def error_transfer(num_task, trained_model_state_list, test_ds_list, test_group_
 
 #######################################################################################################################
 """
-Similarity model, similarity = -gHg, where g is gradient while H is Hessian matrix, detaisl in paper ...
+Similarity model, similarity = -gHg, where g is gradient while H is Hessian matrix
 
 The gHg calculation is based on average of gradient in batches:
 g = sum(g_batches)/B , H = sum(H_batches)/B, B is the number of batches
