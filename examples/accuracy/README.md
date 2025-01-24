@@ -1,6 +1,6 @@
-# Continual Learning Experiment Configuration
+# Continual Learning Experiment Configuration (Accuracy)
 
-This repository is designed for evaluating the performance of models in **continual learning scenarios**, focusing on the accuracy across multiple sequential tasks. It includes tools to calculate both average and optimal accuracy metrics.
+This repository is designed for evaluating the performance of models in **continual learning scenarios**, focusing on the **accuracy** across multiple sequential tasks. It includes tools to calculate both average and optimal accuracy metrics.
 
 ## Purpose
 The primary goal of this repository is to:
