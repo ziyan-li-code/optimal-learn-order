@@ -33,7 +33,7 @@ This module calculates **inter-task similarity** using techniques such as:
 - **-gHg (negative gradient-Hessian-gradient) analysis**
 ---
 
-## Example Repository
+## Repository
 The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file. \
 The `linear_model` directory contains codes for linear perturbation theory.
 
