@@ -1,8 +1,12 @@
 Codes for the continual learning project with optimal order model
 
+## Repository
+The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file. \
+The `linear_model` directory contains codes for linear perturbation theory.
+
 ## Explanations for Modules
 
-This repository contains several modules designed for machine learning tasks. Below is an explanation of each module and its purpose:
+This repository contains several modules designed for machine learning experiments. Below is an explanation of each module and its purpose:
 
 ### `continual_model.py`
 This module provides tools for model training, including implementations for **continual learning**. It supports tasks such as incremental learning with multiple datasets.
@@ -32,10 +36,6 @@ This module calculates **inter-task similarity** using techniques such as:
 - **Zero-shot learning**
 - **-gHg (negative gradient-Hessian-gradient) analysis**
 ---
-
-## Repository
-The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file. \
-The `linear_model` directory contains codes for linear perturbation theory.
 
 ## General Parameters
 
