@@ -31,11 +31,11 @@ This module computes the **optimal order** for tasks or datasets based on the **
 This module calculates **inter-task similarity** using techniques such as:
 - **Zero-shot learning**
 - **-gHg (negative gradient-Hessian-gradient) analysis**
-
 ---
 
 ## Example Repository
 The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file.
+The `linear_model` directory contains codes for linear perturbation theory.
 
 ## General Parameters
 
