@@ -18,7 +18,7 @@ This module handles the **preprocessing** and **uploading** of TensorFlow datase
 - Fashion MNIST
 
 ### `file_extract.py`
-This module extracts data from `.csv` files. It processes files containing **labels** and **accuracies** to prepare them for further analysis.
+This module extracts data from `.csv` files. It processes files containing **labels** and **accuracies/forget** to prepare them for further analysis.
 
 ### `group_split.py`
 This module allows for selecting specific classes from a dataset. It splits the selected classes into **task-specific groups** for targeted training.
