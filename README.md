@@ -1,7 +1,7 @@
 Codes for the continual learning project with optimal order model
 
 ## Repository
-The `examples` directory contains experiment examples with detailed instructions in the respective `README.md` file. \
+The `experiment` directory contains experiment examples with detailed instructions in the respective `README.md` file. \
 The `linear_model` directory contains codes for linear perturbation theory.
 
 ## Explanations for Modules
