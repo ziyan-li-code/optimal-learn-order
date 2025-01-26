@@ -67,7 +67,6 @@ os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] = 'false'  # Disable pre_allocation
 # parameters initialization in model
 rng, inp_rng, init_rng = jax.random.split(jax.random.PRNGKey(0), 3)  # PRNGKey for train_state initialization
 ini_sample_input = (params['batch_size'], params['image_size'][0], params['image_size'][1], params['image_size'][2])  # batch_size, image shape
-# image_size0, image_size1 = params['image_size'][0], params['image_size'][1]: for image resize, not necessary
 
 ###############################################################################################################
 """
