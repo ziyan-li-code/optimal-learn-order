@@ -27,7 +27,7 @@ params = {
     # parameters for model choose
     'ds_type': 'cifar10',  # dataset type
     'nn_type': 'cnn2',  # nn model type: 'cnn2', 'cnn5', 'nonlinear2', 'nonlinear5'
-    'sim_type': '-ghg',  # similarity calculation model type: 'zero_shot', '-ghg'
+    'sim_type': 'zero_shot',  # similarity calculation model type: 'zero_shot', '-ghg'
     'ghg_batch_size': 256,  # batch size to calculate similarity if 'sim_type' = '-ghg'
 
     # parameters for training process
