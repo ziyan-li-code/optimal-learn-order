@@ -67,7 +67,7 @@ def gen_ds_load(group_label, const_params, train_dataset, test_dataset):
 
 
 # Specific dataloader for -gHg-model-based similarity calculation
-def gen_ds_load_ghg(group_label, const_params, train_dataset, test_dataset):
+def gen_ds_load_neg_ghg(group_label, const_params, train_dataset, test_dataset):
     ghg_batch_size = const_params['ghg_batch_size']
     num_task = const_params['num_task']
     shuffle_size = const_params['shuffle_size']
