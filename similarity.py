@@ -224,4 +224,4 @@ def sim_matrix_neg_ghg(const_params, train_ds_list, trained_state_list, train_gr
         for v in range(num_task):
             sim_neg_ghg_avg_m = sim_neg_ghg_avg_m.at[mu, v].set((sim_neg_ghg_m[mu, v] + sim_neg_ghg_m[v, mu])/2)
 
-    return sim_neg_ghg_avg_m, g_norm_m, Hg_norm_m
+    return sim_neg_ghg_avg_m
