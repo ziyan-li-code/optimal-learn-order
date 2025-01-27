@@ -213,10 +213,8 @@ def sim_matrix_neg_ghg(const_params, train_ds_list, trained_state_list, train_gr
             # ghg similarity with (task-mu, task-v)
             grad_mu_v_flat, hvp_flat = flatten_gradients(grad_state_mu_ds_v_cpu), flatten_gradients(hvp) # 1D vector flat
             grad_mu_v_norm, hvp_norm = jnp.linalg.norm(grad_mu_v_flat, ord=2), jnp.linalg.norm(hvp_flat, ord=2)
-            ghg_norm = jnp.dot(grad_mu_v_flat, hvp_flat)   # / (grad_mu_v_norm * grad_mu_v_norm) # / (grad_mu_v_norm * hvp_norm)
+            ghg_norm = jnp.dot(grad_mu_v_flat, hvp_flat)
             sim_neg_ghg_m = sim_neg_ghg_m.at[mu, v].set(-ghg_norm)
-            g_norm_m = g_norm_m.at[mu, v].set(grad_mu_v_norm)
-            Hg_norm_m = Hg_norm_m.at[mu, v].set(hvp_norm)
 
     # average of (mu, v) and (v, mu) in similarity matrix
     sim_neg_ghg_avg_m = jnp.zeros((num_task, num_task))
